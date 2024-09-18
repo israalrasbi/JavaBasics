@@ -1,5 +1,6 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
@@ -9,7 +10,9 @@ public class Main {
          */
         System.out.println();
         System.out.println("Task 5:");
-        String str = "the cat in the hat";
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a sentence: ");
+        String str = sc.nextLine();
         int count = 0; //create a variable to count the number of vowels
         //convert the string into char, then loop through the char
         for (char c: str.toCharArray()) {
