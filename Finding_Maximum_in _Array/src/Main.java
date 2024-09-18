@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -10,7 +12,26 @@ public class Main {
         //print
         System.out.println();
         System.out.println("Task 4:");
-        int[] arr = {2,3,6,4,1,9,0};
+
+        Scanner sc = new Scanner(System.in);
+        //first take the size of the array
+        System.out.println("Enter the size of the array: ");
+        int arr_size = 0;
+        if (sc.hasNextInt()) {
+            arr_size = sc.nextInt();
+        }
+
+        //initialize the array size depending on the user input
+        int[] arr = new int[arr_size];
+
+        //ask the user to enter the elements
+        System.out.println("Enter the elements of the array: ");
+        //add the elements
+        for (int i = 0; i < arr_size; i++) {
+            if (sc.hasNextInt()) {
+                arr[i] = sc.nextInt();
+            }
+        }
         //assume the max is the first number
         int max = arr[0];
         //loop through the array
